@@ -6,4 +6,4 @@ buscarDados();
 let btn = document.querySelector("button")
 //console.log(btn)
 
-btn.addEventListener('click', enviarDados)
+btn.addEventListener('click',true ? enviarDados : enviarDados)

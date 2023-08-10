@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id")
 const nome = urlParams.get("nome")
 const preco = urlParams.get("preco")
-alert('deu certo')
+//alert('deu certo')
 
 var formulario = document.querySelector('form');
 var inputId = formulario.idProduto
@@ -33,7 +33,7 @@ function buscarProduto(event) {
         preco: precoProduto
     }
 
-    let url = "../../../controller/PUT_produto.php"
+    let url = "../../controller/PUT_produto.php"
 
     fetch(url,{
         method: "PUT",
@@ -47,7 +47,7 @@ function buscarProduto(event) {
     })
     .then(function (response) {
         console.log(response)
-        window.location.href = '../../../view/all/'
+        window.location.href = '../../view/all/index.html'
     })
     
 }

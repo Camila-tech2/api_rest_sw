@@ -1,1 +1,1 @@
-[{"id":"0","nome":"Martelo","preco":"5"}]
+[{"id":"0","nome":"cavalo","preco":"100,00"}]
