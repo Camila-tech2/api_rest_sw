@@ -5,9 +5,9 @@ const preco = urlParams.get("preco")
 //alert('deu certo')
 
 var formulario = document.querySelector('form');
-var inputId = formulario.idProduto
-var inputNome = formulario.nomeProduto
-var inputPreco = formulario.precoProduto
+var inputId = formulario.idUser
+var inputNome = formulario.nomeUser
+var inputPreco = formulario.telUser
 var btn = document.querySelector('.btn')
 
 inputId.value = id
@@ -21,16 +21,16 @@ btn.addEventListener('click', buscarProduto)
 function buscarProduto(event) {
     event.preventDefault();
     
-    let idProduto = inputId.value
-    let nomeProduto = inputNome.value
-    let precoProduto = inputPreco.value
+    let idUser = inputId.value
+    let nomeUser = inputNome.value
+    let telUser = inputPreco.value
     
     formulario.reset()
 
     let produto = {
-        id: idProduto,
-        nome: nomeProduto,
-        preco: precoProduto
+        id: idUser,
+        nome: nomeUser,
+        preco: telUser
     }
 
     let url = "../../controller/PUT_produto.php"

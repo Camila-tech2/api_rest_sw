@@ -6,9 +6,9 @@ btn.addEventListener('click', enviarDados)
 function enviarDados(event){
     event.preventDefault();
     // selecionando objetos html
-    let inputId = form.idProduto
-    let inputNome = form.nomeProduto
-    let inputPreco = form.precoProduto
+    let inputId = form.idUser
+    let inputNome = form.nomeUser
+    let inputPreco = form.telUser
     
     // obtendo o conteúdo de texto
     let id = inputId.value

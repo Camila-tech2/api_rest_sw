@@ -6,17 +6,17 @@
 
     $id = $dados->id;
     
-    $produtos = json_decode(realizarLeitura());
+    $usuarios = json_decode(realizarLeitura());
     
-    foreach($produtos as $p) {
-        if($p->id == $id){
-            $produto = $p;
+    foreach($usuarios as $u) {
+        if($u->id == $id){
+            $usuario = $u;
             break;
         }
     }
 
 
-    echo json_encode($produto);
+    echo json_encode($usuario);
     
     
 ?>

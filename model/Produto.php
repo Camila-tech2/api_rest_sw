@@ -2,12 +2,18 @@
     class Produto{
         public $id;
         public $nome;
-        public $preco;
+        public $tel;
+        public $email;
+        public $cep;
+        public $cpf;
 
-        function __construct($id, $nome, $preco) {
+        function __construct($id, $nome, $tel, $email, $cep, $cpf) {
             $this->id = $id;
             $this->nome = $nome;
-            $this->preco = $preco;
+            $this->tel = $tel;
+            $this->email = $email;
+            $this->cep = $cep;
+            $this->cpf = $cpf;
         }
     }
 ?>

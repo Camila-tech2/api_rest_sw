@@ -2,10 +2,10 @@
 export default function _delete(event) {
     let tr = event.target.parentNode.parentNode
 
-    let idProduto = tr.children[0].textContent
+    let idUser = tr.children[0].textContent
 
     let produto = {
-        id: idProduto
+        id: idUser
     }
 
     let url = "../../controller/DELETE_produto.php"

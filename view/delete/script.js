@@ -1,5 +1,5 @@
 var formulario = document.querySelector('form');
-var inputId = formulario.idProduto
+var inputId = formulario.idUser
 var btn = document.querySelector('.btn')
 
 btn.addEventListener('click', buscarProduto)
@@ -7,11 +7,11 @@ btn.addEventListener('click', buscarProduto)
 
 function buscarProduto(event) {
     event.preventDefault();
-    let idProduto = inputId.value
+    let idUser = inputId.value
     formulario.reset()
 
     let produto = {
-        id: idProduto
+        id: idUser
     }
 
     let url = "../../controller/DELETE_produto.php"

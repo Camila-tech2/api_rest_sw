@@ -1,7 +1,10 @@
 var formulario = document.querySelector('form');
-var inputId = formulario.idProduto
-var inputNome = formulario.nomeProduto
-var inputPreco = formulario.precoProduto
+var inputId = formulario.idUser
+var inputNome = formulario.nomeUser
+var inputTel = formulario.telUser
+var inputEmail = formulario.emailUser
+var inputCep = formulario.cepUser
+var inputCpf = formulario.cpfUser
 var btn = document.querySelector('.btn')
 
 btn.addEventListener('click', buscarProduto)
@@ -10,16 +13,22 @@ btn.addEventListener('click', buscarProduto)
 function buscarProduto(event) {
     event.preventDefault();
     
-    let idProduto = inputId.value
-    let nomeProduto = inputNome.value
-    let precoProduto = inputPreco.value
+    let idUser = inputId.value
+    let nomeUser = inputNome.value
+    let telUser = inputTel.value
+    let emailUser = inputEmail.value
+    let cepUser = inputCep.value
+    let cpfUser = inputCpf.value
     
     formulario.reset()
 
-    let produto = {
-        id: idProduto,
-        nome: nomeProduto,
-        preco: precoProduto
+    let usuario = {
+        id: idUser,
+        nome: nomeUser,
+        tel: telUser, 
+        email: emailUser, 
+        cep: cepUser, 
+        cpf: cpfUser
     }
 
     let url = "../../controller/PUT_produto.php"
@@ -29,7 +38,7 @@ function buscarProduto(event) {
         headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(produto)
+          body: JSON.stringify(usuario)
     })
     .then(function (response) {
         return response.json()

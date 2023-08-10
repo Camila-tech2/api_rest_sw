@@ -5,16 +5,16 @@
    
     // recebendo os dados do front
     $dados = json_decode(file_get_contents('php://input'));
-    $produto = new Produto($dados->id, $dados->nome, $dados->preco);
+    $usuario = new Produto($dados->id, $dados->nome, $dados->preco);
    
     // lendo o arquivo de dados
-    $produtos = json_decode(realizarLeitura());
-    array_push($produtos, $produto);
+    $usuarios = json_decode(realizarLeitura());
+    array_push($usuarios, $usuario);
     
         
-    $json = json_encode($produtos);
+    $json = json_encode($usuarios);
     escrever($json);
 
 
-    echo json_encode($produto);
+    echo json_encode($usuario);
 ?>

@@ -5,9 +5,9 @@ export default function enviarDados(event) {
     // selecionando objetos html
     let form = document.querySelector("form")
 
-    let inputId = form.idProduto
-    let inputNome = form.nomeProduto
-    let inputPreco = form.precoProduto
+    let inputId = form.idUser
+    let inputNome = form.nomeUser
+    let inputPreco = form.telUser
 
     // obtendo o conteúdo de texto
     let id = inputId.value

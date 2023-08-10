@@ -7,18 +7,18 @@
 
     $id = $dados->id;
     
-    $produtos = json_decode(realizarLeitura());
+    $usuarios = json_decode(realizarLeitura());
     
-    foreach($produtos as $p) {
-        if($p->id == $id){
-            unset($produtos[$id]);
+    foreach($usuarios as $u) {
+        if($u->id == $id){
+            unset($usuarios[$id]);
             break;
         }
     }
     $lista = [];
-    foreach ($produtos as $prod) {
-       if (!$prod == null) {
-            array_push($lista, $prod);
+    foreach ($usuarios as $user) {
+       if (!$user == null) {
+            array_push($lista, $user);
        }
     }
 

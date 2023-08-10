@@ -2,9 +2,9 @@
     
     require_once './ler.php';
 
-    $produtos = realizarLeitura();
+    $usuarios = realizarLeitura();
     
-    echo $produtos;
+    echo $usuarios;
     
     
 ?>

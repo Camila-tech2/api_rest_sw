@@ -7,19 +7,25 @@
 
     $id = $dados->id;
     $nome = $dados->nome;
-    $preco = $dados->preco;
+    $tel = $dados->tel;
+    $email = $dados->email;
+    $cep = $dados->cep;
+    $cpf = $dados->cpf;
     
-    $produtos = json_decode(realizarLeitura());
+    $usuarios = json_decode(realizarLeitura());
     
-    foreach($produtos as $p) {
-        if($p->id == $id){
-            $p->nome = $nome;
-            $p->preco = $preco;
+    foreach($usuarios as $u) {
+        if($u->id == $id){
+            $u->nome = $nome;
+            $u->tel = $tel;
+            $u->email = $email;
+            $u->cep = $cep;
+            $u->cpf = $cpf;
             break;
         }
     }
 
-    $json = json_encode($produtos);
+    $json = json_encode($usuarios);
     escrever($json);
 
     echo json_encode($json);
