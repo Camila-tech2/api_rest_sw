@@ -19,7 +19,7 @@ var btn = document.querySelector('.btn')
 inputId.value = id
 inputNome.value = nome
 inputTel.value = tel
-inputEmail.value = email
+inputEmail.value = email   
 inputCep.value = cep
 inputCpf.value = cpf
 

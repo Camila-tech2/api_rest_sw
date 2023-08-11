@@ -43,7 +43,7 @@ export default function buscarDados(){
         function editarTags(listTags, element){
             listTags[1].textContent = element.id
             listTags[2].textContent = element.nome
-            listTags[3].textContent = element.telefone
+            listTags[3].textContent = element.tel
             listTags[4].textContent = element.email
             listTags[5].textContent = element.cep
             listTags[6].textContent = element.cpf
