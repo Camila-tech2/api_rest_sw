@@ -1,18 +1,27 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id")
 const nome = urlParams.get("nome")
-const preco = urlParams.get("preco")
+const tel = urlParams.get("tel")
+const email = urlParams.get("email")
+const cep = urlParams.get("cep")
+const cpf = urlParams.get("cpf")
 //alert('deu certo')
 
 var formulario = document.querySelector('form');
 var inputId = formulario.idUser
 var inputNome = formulario.nomeUser
-var inputPreco = formulario.telUser
+var inputTel = formulario.telUser
+var inputEmail = formulario.emailUser
+var inputCep = formulario.cepUser
+var inputCpf = formulario.cpfUser
 var btn = document.querySelector('.btn')
 
 inputId.value = id
 inputNome.value = nome
-inputPreco.value = preco
+inputTel.value = tel
+inputEmail.value = email
+inputCep.value = cep
+inputCpf.value = cpf
 
 
 btn.addEventListener('click', buscarProduto)
@@ -23,14 +32,20 @@ function buscarProduto(event) {
     
     let idUser = inputId.value
     let nomeUser = inputNome.value
-    let telUser = inputPreco.value
+    let telUser = inputTel.value
+    let emailUser = inputEmail.value
+    let cepUser = inputCep.value
+    let cpfUser = inputCpf.value
     
     formulario.reset()
 
-    let produto = {
+    let usuario = {
         id: idUser,
         nome: nomeUser,
-        preco: telUser
+        tel: telUser,
+        email: emailUser,
+        cep: cepUser,
+        cpf: cpfUser
     }
 
     let url = "../../controller/PUT_produto.php"
@@ -40,7 +55,7 @@ function buscarProduto(event) {
         headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(produto)
+          body: JSON.stringify(usuario)
     })
     .then(function (response) {
         return response.json()

@@ -1,5 +1,3 @@
-
-
 export default function enviarDados(event) {
     event.preventDefault();
     // selecionando objetos html
@@ -7,36 +5,45 @@ export default function enviarDados(event) {
 
     let inputId = form.idUser
     let inputNome = form.nomeUser
-    let inputPreco = form.telUser
+    let inputTel = form.telUser
+    let inputEmail = form.emailUser
+    let inputCep = form.cepUser
+    let inputCpf = form.cpfUser
 
     // obtendo o conteúdo de texto
     let id = inputId.value
     let nome = inputNome.value
-    let preco = inputPreco.value
+    let tel = inputTel.value
+    let email = inputEmail.value
+    let cep = inputCep.value
+    let cpf = inputCpf.value
 
-    if (id == "" || nome == "" || preco == "") {
+    if (id == "" || nome == "" || tel == "" || email == "" || cep == "" || cpf == "") {
         console.log("vazio")
     } else {
-        let produto = {
+        let usuario = {
             id: id,
             nome: nome,
-            preco: preco
+            tel: tel,
+            email: email,
+            cep: cep,
+            cpf: cpf
         }
         form.reset()
-        console.log(produto)
-        incluirDados(produto)
+        console.log(usuario)
+        incluirDados(usuario)
     }
 
 }
 
-function incluirDados(produto) {
+function incluirDados(usuario) {
     let url = "../../controller/POST_produto.php"
     fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(produto)
+        body: JSON.stringify(usuario)
     })
         .then(function (response) {
             return response.json()

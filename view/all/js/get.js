@@ -20,7 +20,7 @@ export default function buscarDados(){
             var listTags = []
             response.forEach(element => {
                 
-                let textTags = ['tr','td','td', 'td', 'td', 'td', 'img', 'img']
+                let textTags = ['tr','td','td', 'td', 'td','td', 'td', 'td', 'td', 'img', 'img']
                 
                 listTags = criarTags(textTags, listTags)
                 listTags = editarTags(listTags, element)
@@ -43,13 +43,16 @@ export default function buscarDados(){
         function editarTags(listTags, element){
             listTags[1].textContent = element.id
             listTags[2].textContent = element.nome
-            listTags[3].textContent = element.preco
-            listTags[4].appendChild(listTags[6])
-            listTags[5].appendChild(listTags[7])
-            listTags[6].src = "./img/edit.png"
-            listTags[6].onclick = editar
-            listTags[7].src = "./img/lixo.svg"
-            listTags[7].onclick = deletar
+            listTags[3].textContent = element.telefone
+            listTags[4].textContent = element.email
+            listTags[5].textContent = element.cep
+            listTags[6].textContent = element.cpf
+            listTags[7].appendChild(listTags[9])
+            listTags[8].appendChild(listTags[10])
+            listTags[9].src = "./img/edit.png"
+            listTags[9].onclick = editar
+            listTags[10].src = "./img/lixo.svg"
+            listTags[10].onclick = deletar
     
             return listTags
         }
@@ -60,6 +63,9 @@ export default function buscarDados(){
             listTags[0].appendChild(listTags[3])
             listTags[0].appendChild(listTags[4])
             listTags[0].appendChild(listTags[5])
+            listTags[0].appendChild(listTags[6])
+            listTags[0].appendChild(listTags[7])
+            listTags[0].appendChild(listTags[8])
 
     
             return listTags

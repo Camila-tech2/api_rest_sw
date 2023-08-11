@@ -4,7 +4,7 @@ export default function _delete(event) {
 
     let idUser = tr.children[0].textContent
 
-    let produto = {
+    let usuario = {
         id: idUser
     }
 
@@ -15,7 +15,7 @@ export default function _delete(event) {
         headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(produto)
+          body: JSON.stringify(usuario)
     })
     .then(function (response) {
         return response.json()
