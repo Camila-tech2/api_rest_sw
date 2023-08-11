@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="./estilo.css">
     <title>Editar Dados</title>
 </head>
-<body>
-    <div class="metodos_http">
-        <div class="POST">
+<body >
+    <div class="grupo">
+        <div class="metodos_http">
+        <div class="POST" style="width: 150%;">
     <form action="" class="editar">
-        <label for="">Digite o Id do produto que deseja editar: </label>
-        <Input style="width: 50px;" name="idUser" id="idUser" />
+        <label for="">Id do Usuário: </label>
+        <Input style="width: 50px;" name="idUser" id="idUser" disabled/>
         <br>
         <hr>
         <h4>Dados à Modificar</h4>
-                <label for="">Nome</label>
+        <div class="grupo2">
+            <label for="">Nome</label>
                 <input id="nome" type="text" name="nomeUser">
                 <br>
                 <label for="">Telefone</label>
@@ -30,11 +32,15 @@
                 <br>
                 <label for="">cpf</label>
                 <input id="cpf" type="text" name="cpfUser">
+        </div>
+                
         <button class="btn">Editar</button>
     </form>
     </div>
     </div>
     <br>
+    </div>
+    
 
     <script src="./js/view_put.js"></script>
 </body>
