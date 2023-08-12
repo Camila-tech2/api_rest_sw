@@ -9,23 +9,22 @@ $id = $dados->id;
 
 $usuarios = json_decode(realizarLeitura());
 
-foreach ($usuarios as $u)
+for ($i = 0; $i < count($usuarios); $i++)
 {
-    if ($u->id == $id)
-    {
-        unset($usuarios[$id]);
-        break;
-    }
+  if ($usuarios[$i]->id == $id)
+  {
+    unset($usuarios[$i]);
+    break;
+  }
 }
 $lista = [];
 foreach ($usuarios as $user)
 {
-    if (!$user == null)
-    {
-        array_push($lista, $user);
-    }
+  if (!$user == null)
+  {
+    array_push($lista, $user);
+  }
 }
-
 
 $json = json_encode($lista);
 escrever($json);

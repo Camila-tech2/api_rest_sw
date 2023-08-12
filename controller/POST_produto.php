@@ -15,16 +15,21 @@ for ($i = 0; $i < count($usuarios); $i++)
     break;
   }
 }
-$usuario = new Produto($dados->id, $dados->nome, $dados->tel, $dados->email, $dados->cep, $dados->cpf);
+if ($postar)
+{
+  $usuario = new Produto($dados->id, $dados->nome, $dados->tel, $dados->email, $dados->cep, $dados->cpf);
 
-// lendo o arquivo de dados
-array_push($usuarios, $usuario);
+  // empurrando no registro
+  array_push($usuarios, $usuario);
 
-
-$json = json_encode($usuarios);
-escrever($json);
-echo json_encode($usuario);
-
-
+  // escrevendo o novo registro no arquivo
+  $json = json_encode($usuarios);
+  escrever($json);
+  echo json_encode($usuario);
+}
+else
+{
+  echo json_encode("vish");
+}
 
 ?>

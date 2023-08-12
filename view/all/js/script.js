@@ -3,7 +3,7 @@ import enviarDados from "./post.js";
 
 buscarDados();
 
-let btn = document.querySelector("button")
+let btn = document.querySelector("button");
 //console.log(btn)
 
-btn.addEventListener('click',true ? enviarDados : enviarDados)
+btn.addEventListener("click", enviarDados);
