@@ -44,7 +44,7 @@ function incluirNaTela(response){
     var listTags = []
     
             
-        let textTags = ['tr','td','td', 'td']
+        let textTags = ['tr','td','td', 'td', 'td', 'td', 'td']
             
         listTags = criarTags(textTags, listTags)
         listTags = editarTags(listTags, response)
@@ -64,18 +64,24 @@ function criarTags(textTags, listTags){
     return listTags
 }
 
-function editarTags(listTags, element){
-    listTags[1].textContent = element.id
-    listTags[2].textContent = element.nome
-    listTags[3].textContent = element.preco
+function editarTags(listTags, element) {
+    listTags[1].textContent = element.id;
+    listTags[2].textContent = element.nome;
+    listTags[3].textContent = element.tel;
+    listTags[4].textContent = element.email;
+    listTags[5].textContent = element.cep;
+    listTags[6].textContent = element.cpf;
 
-    return listTags
-}
+    return listTags;
+  }
 
-function incluir(listTags){
-    listTags[0].appendChild(listTags[1])
-    listTags[0].appendChild(listTags[2])
-    listTags[0].appendChild(listTags[3])
+  function incluir(listTags) {
+    listTags[0].appendChild(listTags[1]);
+    listTags[0].appendChild(listTags[2]);
+    listTags[0].appendChild(listTags[3]);
+    listTags[0].appendChild(listTags[4]);
+    listTags[0].appendChild(listTags[5]);
+    listTags[0].appendChild(listTags[6]);
 
-    return listTags
-}
+    return listTags;
+  }
