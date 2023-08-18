@@ -10,7 +10,7 @@ export default function enviarDados(event) {
     let inputCep = form.cepUser;
     let inputCpf = form.cpfUser;
   
-    // obtendo o conteúdo de texto
+    // obtendo o conteúdo de texto buhguyhuhik
     let id = inputId.value;
     let nome = inputNome.value;
     let tel = inputTel.value;
