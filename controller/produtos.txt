@@ -1,1 +1,1 @@
-[{"id":"0","nome":"Danilo Limaaa","tel":"11933819985","email":"oculosdanilo@gmail.com","cep":"as","cpf":"as"},{"id":"1","nome":"petista","tel":"4578678","email":"petista","cep":"bolsonaro","cpf":"23321"},{"id":"5","nome":"bolsonaro","tel":"222222","email":"62165","cep":"bolsonaro","cpf":"2222222"}]
+[{"id":"0","nome":"Danilo Limaaa","tel":"11933819985","email":"oculosdanilo@gmail.com","cep":"as","cpf":"as"},{"id":"1","nome":"petista","tel":"4578678","email":"petista","cep":"bolsonaro","cpf":"23321"}]

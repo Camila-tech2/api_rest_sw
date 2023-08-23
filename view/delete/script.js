@@ -28,12 +28,8 @@ function buscarProduto(event) {
     })
     .then(function (response) {
         console.log(response)
-        /*
-        let tabela = document.querySelector('table')
-        tabela.style.display =  'block'
-
         incluirNaTela(response)
-        */
+        
     })
     
 }
@@ -41,20 +37,20 @@ function buscarProduto(event) {
 
 function incluirNaTela(response){
     let corpo_tabela = document.querySelector("#corpo_tabela")
-        
-    var listTags = []
     
-            
-        let textTags = ['tr','td','td', 'td']
-            
+    var listTags = []
+    response.forEach(element => {
+        
+        let textTags = ['tr','td','td', 'td', 'td','td', 'td']
+        
         listTags = criarTags(textTags, listTags)
-        listTags = editarTags(listTags, response)
+        listTags = editarTags(listTags, element)
         listTags = incluir(listTags)
 
         corpo_tabela.appendChild(listTags[0])
         listTags = []
-    
-          
+    });
+      
 }
 
 function criarTags(textTags, listTags){    
@@ -65,18 +61,24 @@ function criarTags(textTags, listTags){
     return listTags
 }
 
-function editarTags(listTags, element){
-    listTags[1].textContent = element.id
-    listTags[2].textContent = element.nome
-    listTags[3].textContent = element.preco
+function editarTags(listTags, element) {
+    listTags[1].textContent = element.id;
+    listTags[2].textContent = element.nome;
+    listTags[3].textContent = element.tel;
+    listTags[4].textContent = element.email;
+    listTags[5].textContent = element.cep;
+    listTags[6].textContent = element.cpf;
 
-    return listTags
-}
+    return listTags;
+  }
 
-function incluir(listTags){
-    listTags[0].appendChild(listTags[1])
-    listTags[0].appendChild(listTags[2])
-    listTags[0].appendChild(listTags[3])
+  function incluir(listTags) {
+    listTags[0].appendChild(listTags[1]);
+    listTags[0].appendChild(listTags[2]);
+    listTags[0].appendChild(listTags[3]);
+    listTags[0].appendChild(listTags[4]);
+    listTags[0].appendChild(listTags[5]);
+    listTags[0].appendChild(listTags[6]);
 
-    return listTags
-}
+    return listTags;
+  }
