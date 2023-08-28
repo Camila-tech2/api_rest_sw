@@ -3,33 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+    <title>Busca Id </title>
 </head>
-<body>
-    <h2>Busca por ID</h2>
+<body class="corpo">
+        <div class="bloco">
+            <h2>Busca por ID</h2>
     <form action="">
-        <label for="">Digite o Id do produto que deseja ver: </label>
+        <label for="idUser">Digite o Id do produto que deseja ver: </label>
  
         <Input style="width: 50px;" name="idUser" id="idUser" />
         <br>
         <button class="btn">Buscar</button>
     </form>
-    <br>
-    <table class="invisivel" style="display: none;">
-        <thead style="background-color: black; color: white;">
-            <tr>
-                <td>id</td>
-                <td>nome</td>
-                <td>telefone</td>
-                <td>e-mail</td>
-                <td>cep</td>
-                <td>cpf</td>
-            </tr>
-            <tbody id="corpo_tabela">
+    <br> </div>
 
-            </tbody>
+    <table class="table" style="display: none;">
+        <div class="table">
+            <thead class="thead-dark">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">CEP</th>
+            <th scope="col">CPF</th>
+          </tr>
         </thead>
+        <tbody id="corpo_tabela">
+          
+        </tbody>
+        </div>
+        
     </table>
+        
+  
+    
     <script src="./script.js"></script>
 </body>
 </html>
