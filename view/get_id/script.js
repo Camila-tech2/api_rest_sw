@@ -30,7 +30,7 @@ function buscarProduto(event) {
         console.log(response)
         
         let tabela = document.querySelector('table')
-        tabela.style.display =  'block'
+        tabela.style.display =  'table'
 
         incluirNaTela(response)
     })
